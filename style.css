@@ -1,0 +1,99 @@
+:root {
+  --white: #f8f8f8;
+  --grey: #707070;
+  --lightBlue: #1792d2;
+  --darkBlue: #143774;
+}
+
+body {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+}
+/* Typography */
+
+.title {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--darkBlue);
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  color: var(--lightBlue);
+  font-weight: 700;
+}
+
+.title,
+.subtitle {
+  margin: 0;
+}
+
+header {
+  background: var(--white);
+  padding: 2em 0;
+}
+
+nav ul {
+  /* border: 1px solid magenta; */
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  /* border: 2px dotted orange; */
+  margin-left: 2.2em;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--grey);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.2em;
+}
+nav a:hover,
+nav a:focus {
+  color: var(--lightBlue);
+  outline: none;
+}
+
+.current {
+  border-bottom: 2px solid var(--grey);
+}
+
+.current:hover {
+  color: var(--grey);
+}
+
+/* Media query */
+@media (max-width: 760px) {
+  html {
+    font-size: 12px;
+  }
+  .container-flex {
+    flex-direction: column;
+  }
+  header {
+    text-align: center;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav li {
+    margin: 0.4em 0;
+  }
+}
