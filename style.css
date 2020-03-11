@@ -1,3 +1,7 @@
+/* * {
+  margin: 0;
+} */
+
 :root {
   --white: #f8f8f8;
   --grey: #707070;
@@ -5,20 +9,23 @@
   --darkBlue: #143774;
 }
 
+/*==============================================Layout================================================*/
 body {
-  margin: 0;
   font-family: "Ubuntu", sans-serif;
+  margin: 0;
 }
 
 .container {
   width: 90%;
   max-width: 950px;
   margin: 0 auto;
+  /* border: 1px solid navy; */
 }
 
 .container-flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 /* Typography */
 
@@ -38,23 +45,22 @@ body {
 .title,
 .subtitle {
   margin: 0;
+  /* border: 1px solid yellowgreen; */
 }
 
+/*================================================Navbar============================================*/
 header {
   background: var(--white);
-  padding: 2em 0;
+  padding: 1.1em 0;
 }
 
 nav ul {
-  /* border: 1px solid magenta; */
   list-style: none;
-  padding: 0;
+  padding: 0.5em 0;
   display: flex;
-  justify-content: center;
 }
 
 nav li {
-  /* border: 2px dotted orange; */
   margin-left: 2.2em;
 }
 
@@ -79,10 +85,10 @@ nav a:focus {
   color: var(--grey);
 }
 
-/* Media query */
-@media (max-width: 760px) {
+/* ======================================Media query=========================================== */
+@media (max-width: 787px) {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
   .container-flex {
     flex-direction: column;
