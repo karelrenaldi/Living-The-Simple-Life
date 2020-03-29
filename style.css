@@ -233,7 +233,7 @@ body {
   margin-bottom: 1.2em;
 }
 
-/* Media query */
+/*==================================== Media query============================= */
 
 @media (max-width: 787px) {
   html {
@@ -317,8 +317,6 @@ body {
   .article-image {
     height: 50%;
   }
-  .article-recent-secondary {
-  }
   .article-recent-main {
     align-self: stretch;
     margin: 3.5em 0;
@@ -342,4 +340,39 @@ body {
     font-size: 0.655em;
     font-weight: 900;
   }
+
+  .toggler {
+    right: 0;
+  }
+}
+
+.toggler {
+  position: absolute;
+  font-size: 2rem;
+  right: 1.5em;
+  top: 0.8em;
+  display: none !important;
+}
+
+@media (max-width: 787px) {
+  .toggler {
+    display: initial !important;
+  }
+  nav {
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+nav {
+  max-height: fit-content;
+  transition: all 0.3s ease-in-out;
+}
+
+.visible {
+  height: 23vh;
+  opacity: 1;
+  pointer-events: initial;
+  transition: all 0.4s ease-out;
 }
