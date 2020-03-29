@@ -330,6 +330,9 @@ body {
 }
 
 @media (max-width: 368px) {
+  html {
+    font-size: 10px;
+  }
   .article-recent-main {
     width: 57%;
   }
