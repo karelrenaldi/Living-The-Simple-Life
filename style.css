@@ -5,6 +5,12 @@
   --darkBlue: #143774;
 }
 
+/* ==================================COLOR========================================================== */
+header,
+footer {
+  background-color: #c2e8ce;
+}
+
 /*==============================================Layout================================================*/
 body {
   font-family: "Ubuntu", sans-serif;
@@ -30,7 +36,6 @@ body {
 
 /*================================================Navbar============================================*/
 header {
-  background: #dcedc1;
   padding: 1.1em 0;
 }
 
@@ -90,7 +95,6 @@ nav a:focus {
 
 .container-main {
   margin: 2.5em auto;
-  /* border: 2px solid purple; */
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -98,11 +102,9 @@ nav a:focus {
 
 main {
   width: 73%;
-  /* border: 2px solid purple; */
 }
 
 aside {
-  /* border: 2px solid red; */
   width: 25%;
   display: flex;
   flex-direction: column;
@@ -112,11 +114,8 @@ aside {
 .sidebar-widget {
   border: 5px double rgba(0, 110, 0, 0.1);
   border-radius: 10px;
-  /* box-shadow: 4px 7px 19px -10px rgba(0, 0, 0, 0.75); */
   margin-bottom: 1em;
   padding: 0.7em;
-  /* display: flex;
-  flex-direction: column; */
 }
 
 img {
@@ -155,7 +154,6 @@ h2 {
 }
 
 .widget-recent-post {
-  /* border: 2px solid purple; */
   margin-bottom: 1em;
   display: flex;
   flex-direction: column-reverse;
@@ -175,7 +173,6 @@ aside .widget-title {
 
 footer {
   text-align: center;
-  background-color: #dcedc1;
   color: darkgreen;
   padding: 2.2em 0;
 }
@@ -195,7 +192,6 @@ body {
   align-items: flex-start;
   margin: 1.1em 0;
   height: 250px;
-  /* border: 2px solid blue; */
 }
 
 .article-title {
@@ -220,7 +216,6 @@ body {
 }
 
 .article-featured {
-  /* border: 2px solid violet; */
   border-bottom: 2px solid var(--grey);
   padding-bottom: 0.8em;
 }
@@ -257,6 +252,13 @@ body {
   .article-recent-secondary {
     width: 33%;
   }
+  .article-image {
+    height: 100%;
+    object-fit: cover;
+  }
+  .article-image-left {
+    object-position: left;
+  }
 }
 
 @media (min-width: 790px) and (max-width: 1034px) {
@@ -288,10 +290,13 @@ body {
     text-align: inherit;
   }
   .my-image {
-    height: 300px;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: top;
   }
   .widget-image {
-    width: 80%;
+    width: 100%;
+    object-fit: cover;
   }
   .sidebar-widget {
     display: flex;
@@ -308,6 +313,10 @@ body {
   .widget-recent-post:last-child {
     border-bottom: none;
   }
+  .article-image {
+    min-height: 50%;
+    object-fit: cover;
+  }
 }
 
 @media (max-width: 520px) {
@@ -315,7 +324,8 @@ body {
     font-size: 11.5px;
   }
   .article-image {
-    height: 50%;
+    min-height: 50%;
+    object-fit: cover;
   }
   .article-recent-main {
     align-self: stretch;
@@ -346,6 +356,9 @@ body {
 
   .toggler {
     right: 0;
+  }
+  .article-image {
+    height: 50%;
   }
 }
 
